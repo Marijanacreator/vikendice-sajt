@@ -7,5 +7,7 @@ export const vikendica = defineType({name:'vikendica',title:'Vikendica',type:'do
  defineField({name:'cenaPoNoci',title:'Cena po noći (€)',type:'number',validation:r=>r.min(0)}),
  defineField({name:'lokacija',title:'Lokacija',type:'string'}),
  defineField({name:'kapacitet',title:'Broj gostiju',type:'number',validation:r=>r.integer().min(1)}),
+ defineField({name:'kvadratura',title:'Kvadratura (m²)',description:'Površina vikendice u kvadratnim metrima, na primer 65.',type:'number',validation:r=>r.positive()}),
  defineField({name:'status',title:'Status',type:'string',initialValue:'slobodno',options:{list:[{title:'Slobodno',value:'slobodno'},{title:'Zauzeto',value:'zauzeto'}],layout:'radio'},validation:r=>r.required()})
 ],preview:{select:{title:'naziv',subtitle:'lokacija',media:'fotografije.0'}}});
+
