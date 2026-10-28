@@ -1,0 +1,5 @@
+import type {Metadata} from 'next';
+import Link from 'next/link';
+import './globals.css';
+export const metadata:Metadata={title:{default:'Vikendice u prirodi | Predah koji vam treba',template:'%s | Vikendice u prirodi'},description:'Pronađite svoje mesto za predah. Udobne vikendice, mir i vreme za ono što volite.'};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="sr-Latn"><body><header className="site-header"><Link className="brand" href="/" aria-label="Vikendice u prirodi — početna"><span className="brand-icon">⌂</span><span>vikendice<span className="brand-small">U PRIRODI</span></span></Link><nav aria-label="Glavna navigacija"><Link href="/#vikendice">Naše vikendice <span aria-hidden>↗</span></Link></nav></header>{children}<footer><Link className="footer-brand" href="/">Vikendice u prirodi</Link><p>Malo bliže prirodi. Malo bliže sebi.</p><div className="footer-bottom"><span>© {new Date().getFullYear()} Vikendice u prirodi</span><Link href="/studio">Prijava vlasnika ↗</Link></div></footer></body></html>}
