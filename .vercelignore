@@ -1,0 +1,6 @@
+.tools
+.pnpm-store
+node_modules
+.next
+.git
+.env*
